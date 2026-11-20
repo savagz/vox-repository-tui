@@ -32,10 +32,10 @@ jobs:
           - os: ubuntu-24.04
             target: x86_64-unknown-linux-musl
             platform: x86_64-linux
-          - os: macos-14
+          - os: macos-26
             target: aarch64-apple-darwin
             platform: aarch64-macos
-          - os: macos-14
+          - os: macos-26
             target: x86_64-apple-darwin
             platform: x86_64-macos
     runs-on: ${{ matrix.os }}
