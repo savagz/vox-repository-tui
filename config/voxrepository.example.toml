@@ -1,0 +1,23 @@
+# Copiá este archivo a config/voxrepository.toml (sólo builds de desarrollo)
+# o dejá que la TUI escriba el suyo en el directorio de config del usuario al
+# guardar desde el overlay de configuración (F2).
+
+[workspace]
+roots = ["~/CodeDev"]   # carpetas donde buscar repos; vacío = directorio actual
+max_depth = 3           # niveles bajo cada raíz
+ignore = ["node_modules", "target", "vendor", "dist", "build", "Library"]
+
+[poll]
+status_secs = 2         # refresco del estado del repo abierto
+snapshot_secs = 15      # refresco completo (ramas, tags, stash, log)
+workspace_secs = 60     # refresco de la tabla del workspace
+auto_fetch_mins = 0     # git fetch --all automático del repo abierto (0 = nunca)
+
+[git]
+command_timeout_secs = 20
+network_timeout_secs = 120
+log_limit = 400
+
+[ui]
+tick_rate_ms = 250
+language = "es"         # "es" o "en"
